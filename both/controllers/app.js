@@ -1,5 +1,5 @@
 AppController = RouteController.extend({
-    layoutTemplate: "home",
+    layoutTemplate: "Home",
     waitOn: function() {
         // ...
     },
