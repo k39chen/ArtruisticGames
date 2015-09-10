@@ -1,2 +1,3 @@
-# ArtruisticGames
+# Artruistic Games
+
 Website for Artruistic Games
