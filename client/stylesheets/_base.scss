@@ -1,0 +1,59 @@
+body {
+    background: $lightest-gray;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: $text-color;
+}
+.content {
+    max-width: $max-content-width;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 1.25em;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+.nav-list {
+    float: right;
+    height: $header-height;
+    list-style: none;
+
+    .nav-item {
+        float: left;
+        width: 7.0em;
+        height: 100%;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        text-align: center;
+
+        a {
+            @include box-sizing(border-box);
+            @include inline-block;
+            @include transition(
+                border-bottom-color 0.2s,
+                color 0.2s
+            );
+            cursor: pointer;
+            position: relative;
+            top: -0.125em;
+            width: 100%;
+            height: $header-height;
+            text-decoration: none;
+            color: $blue;
+            border-bottom: solid 2px transparent;
+
+            &:hover {
+                border-bottom-color: $blue;
+                color: $white;
+            }
+        }
+    }
+}
+.section {
+    @include box-sizing(border-box);
+    min-height: $min-section-height;
+    padding: 1.25em 0;
+}

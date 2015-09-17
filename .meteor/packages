@@ -5,14 +5,13 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
 email
-eskan:chosen
-iron:router
 francocatena:compass
 fourseven:scss
 jquery
 linto:jquery-ui
-mrt:momentjs
 underscore
 viacdn:font-awesome
+react
+kadira:flow-router
+kadira:react-layout
