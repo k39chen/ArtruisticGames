@@ -22,7 +22,68 @@
 // * SECTION: EXPO
 //============================================================
 #expo {
+    padding: 0;
     background-color: $dark-gray;
+    overflow: hidden;
+
+    max-height: 100%;
+
+    .carousel {
+        min-height: 480px;
+        position: relative;
+
+        .panels {
+            position: relative;
+            text-align: center;
+
+            .panel {
+                @include transition(opacity 0.5s ease-in);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                @include opacity(0);
+
+                &.active {
+                    @include opacity(1);
+                }
+            }
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            text-align: center;
+            
+            .controls {
+                position: absolute;
+                bottom: 1.0em;
+                left: 0;
+                width: 100%;
+
+                .control {
+                    @include transition(opacity 0.2s);
+                    @include transition(transform 0.2s ease-out);
+                    @include opacity(0.5);
+                    @include user-select(none);
+                    cursor: pointer;
+                    color: $white;
+                    padding: 0 0.25em;
+
+                    &:hover {
+                        @include opacity(1);
+                        @include scale(1.25, 1.25);
+                    }
+                    &.active {
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+    }
 }
 //============================================================
 // * SECTION: NEWS
