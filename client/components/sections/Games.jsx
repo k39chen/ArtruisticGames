@@ -3,7 +3,6 @@ Games = React.createClass({
         return (
             <div id="games" className="section">
                 <div className="content">
-                    <h1>Games</h1>
                 </div>
             </div>
         )

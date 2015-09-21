@@ -8,16 +8,9 @@ Expo = React.createClass({
         return {};
     },
     render() {
-        var sources = [
-            {src: "game1.jpg"},
-            {src: "game2.jpg"},
-            {src: "game3.jpg"},
-            {src: "game4.jpg"},
-            {src: "game5.jpg"}
-        ];
         return (
             <div id="expo" className="section">
-                <Carousel sources={sources} />
+                <Carousel sources={AG_DATA.EXPO_SOURCES} />
             </div>
         );
     },

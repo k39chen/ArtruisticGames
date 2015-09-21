@@ -2,10 +2,14 @@
 // * HEADER
 //============================================================
 #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: $header-height;
     line-height: $header-height;
-    background: $black;
-    @include opacity(0.9);
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
 
     .logo {
         text-transform: uppercase;
@@ -58,7 +62,7 @@
     max-height: 100%;
 
     .carousel {
-        min-height: 640px;
+        min-height: $min-carousel-height;
         position: relative;
 
         .panels {
@@ -103,6 +107,7 @@
                     @include transition(transform 0.2s ease-out);
                     @include opacity(0.5);
                     @include user-select(none);
+                    @include text-shadow(3px 3px 5px rgba(0,0,0,0.5));
                     cursor: pointer;
                     color: $white;
                     padding: 0 0.25em;
@@ -124,6 +129,92 @@
 //============================================================
 #news {
     background-color: $lightest-gray;
+    overflow: hidden;
+
+    .news-article {
+        float: left;
+        width: calc(100%/3);
+        padding: 1.0em;
+        @include transition(transform 0.2s, ease-out);
+        @include box-sizing(border-box);
+
+        .wrapper {
+            position: relative;
+            overflow: hidden;
+            padding: 1.0em 0;
+            background: $white;
+            border: solid 1px #DDD;
+            height: $news-article-height;
+
+            .blur-target {
+                .date, .title, .text {
+                    padding: 0 1.5em;
+                }
+                .date {
+                    margin-bottom: 1.0em;
+                    font-size: 0.8em;
+                }
+                .banner {
+                    width: 100%;
+                    margin-bottom: 1.0em;
+                }
+                .title {
+                    margin-bottom: 0.75em;
+                    padding-bottom: 0.75em;
+                    font-weight: bold;
+                    border-bottom: solid 1px #EEE;
+                }
+                .text {
+                    height: 10.0em;
+                    line-height: 1.25em;
+                }
+                .shadow {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 25%;
+                    @include background-image(linear-gradient(transparent, $white));
+                }
+            }
+            .read-more {
+                @include transition(opacity 0.5s, bottom 0.5s);
+                position: absolute;
+                bottom: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                line-height: $news-article-height;
+                background: $blue;
+                color: $white;
+                text-align: center;
+                text-transform: uppercase;
+                @include opacity(0);
+
+                em {
+                    font-weight: bold;
+                }
+                .icon {
+                    position: relative;
+                    margin-left: 0.25em;
+                    font-size: 2.0em;
+                    top: 0.15em;
+                }
+            }
+        }
+        &.hover {
+            cursor: pointer;
+            @include scale(1.05, 1.05);
+    
+            .blur-target {
+                @include filter(blur(5px));
+            }
+            .read-more {
+                @include opacity(0.7);
+                bottom: 0;
+            }
+        }
+    }
 }
 //============================================================
 // * SECTION: GAMES
@@ -136,7 +227,7 @@
 // * SECTION: ABOUT
 //============================================================
 #about {
-    background-color: $lightest-gray;
+    background-color: $red;
 }
 //============================================================
 // * SECTION: CONTACT
