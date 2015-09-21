@@ -2,6 +2,7 @@ News = React.createClass({
     render() {
         return (
             <div id="news" className="section">
+                <h1>News</h1>
                 <div className="content">
                 {AG_DATA.NEWS_ARTICLES.map((article, index) => {
                     return <NewsArticle data={article} key={index} />
@@ -17,7 +18,7 @@ NewsArticle = React.createClass({
             <div className="news-article" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut}>
                 <div className="wrapper">
                     <div className="blur-target">
-                        <div className="date">{this.props.data.date}</div>
+                        <div className="date">Posted on {this.props.data.date}</div>
                         <img className="banner" src={this.props.data.banner} />
                         <div className="title">{this.props.data.title}</div>
                         <div className="text">{this.props.data.text}</div>
