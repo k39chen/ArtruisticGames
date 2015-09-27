@@ -18,7 +18,10 @@ NewsArticle = React.createClass({
             <div className="news-article" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut}>
                 <div className="wrapper">
                     <div className="blur-target">
-                        <div className="date">Posted on {this.props.data.date}</div>
+                        <div className="posted">
+                            <img className="author" src={this.props.data.authorPicture} />
+                            <div className="date">Posted on {this.props.data.date}</div>
+                        </div>
                         <img className="banner" src={this.props.data.banner} />
                         <div className="title">{this.props.data.title}</div>
                         <div className="text">{this.props.data.text}</div>

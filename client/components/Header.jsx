@@ -2,15 +2,13 @@ Header = React.createClass({
     render() {
         return (
             <div id="header">
-                <div className="content">
-                    <a className="logo" href="#">Artruistic <em>Games</em></a>
-                    <ul className="nav-list">
-                        <li className="nav-item"><a onClick={this.handleNavClick} href="#news">News</a></li>
-                        <li className="nav-item"><a onClick={this.handleNavClick} href="#games">Games</a></li>
-                        <li className="nav-item"><a onClick={this.handleNavClick} href="#about">About</a></li>
-                        <li className="nav-item"><a onClick={this.handleNavClick} href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+                <a className="logo" href="#">Artruistic <em>Games</em></a>
+                <ul className="nav-list">
+                    <li className="nav-item"><a onClick={this.handleNavClick} href="#news">News</a></li>
+                    <li className="nav-item"><a onClick={this.handleNavClick} href="#games">Games</a></li>
+                    <li className="nav-item"><a onClick={this.handleNavClick} href="#about">About</a></li>
+                    <li className="nav-item"><a onClick={this.handleNavClick} href="#contact">Contact</a></li>
+                </ul>
             </div>
         )
     },

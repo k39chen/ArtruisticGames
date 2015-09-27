@@ -7,9 +7,11 @@
     left: 0;
     width: 100%;
     height: $header-height;
+    padding: 0 2.0em;
     line-height: $header-height;
     background: rgba(0,0,0,0.8);
     z-index: 1000;
+    @include box-sizing(border-box);
 
     .logo {
         text-transform: uppercase;
@@ -142,18 +144,30 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
-            padding: 1.0em 0;
+            padding: 0 0 1.0em 0;
             background: $white;
             border: solid 1px #DDD;
             height: $news-article-height;
 
             .blur-target {
-                .date, .title, .text {
+                .title, .text {
                     padding: 0 1.5em;
                 }
-                .date {
-                    margin-bottom: 1.0em;
+                .posted {
+                    overflow: hidden;
+                    padding: 1.0em 1.5em;
                     font-size: 0.8em;
+
+                    .author {
+                        float: left;
+                        height: 1.5em;
+                        margin-right: 0.5em;
+                        @include border-radius(50%);
+                    }
+                    .date {
+                        float: left;
+                        line-height: 1.5em;
+                    }
                 }
                 .banner {
                     width: 100%;
