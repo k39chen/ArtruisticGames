@@ -147,34 +147,24 @@ window.AG_DATA = {
     },
     TEAM_MEMBERS: [
         {
-            name: "Steve Coleman",
-            picture: "https://media.licdn.com/mpr/mpr/shrink_100_100/p/4/000/186/0ad/05e71ee.jpg",
-            role: "Game Designer"
+            name: "Swarnava Banerjee",
+            picture: "http://orig12.deviantart.net/b609/f/2009/277/8/b/mameshiba_ram_cosplay_by_erikushin.jpg",
+            role: "Lead Designer"
         },
         {
-            name: "Pranav Mehndiratta",
-            picture: "https://media.licdn.com/mpr/mpr/shrink_100_100/p/5/005/07c/3d7/15b961d.jpg",
-            role: "Game Developer"
+            name: "Bruno Ayllon",
+            picture: "http://orig01.deviantart.net/1762/f/2011/274/2/3/mameshiba_banana_cosplay_by_erikushin-d4bge88.jpg",
+            role: "Lead Programmer"
         },
         {
-            name: "Luwei Zhang",
-            picture: "https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAOLAAAAJGFhMzI0ZTM0LWQzZTYtNGVlMi1hMzQ2LTEwYTFjZGJlMmYyYQ.jpg",
-            role: "Level Designer"
+            name: "Bryan Ferris",
+            picture: "http://orig01.deviantart.net/26db/f/2009/277/1/c/mameshiba_bulbasaur_cosplay_by_erikushin.jpg",
+            role: "Gameplay Programmer"
         },
         {
-            name: "Jeffrey Rogiers",
-            picture: "https://media.licdn.com/mpr/mpr/shrink_100_100/p/8/005/032/05c/1515a88.jpg",
-            role: "Game Artist"
-        },
-        {
-            name: "Frederik Liligren",
-            picture: "https://media.licdn.com/mpr/mpr/shrink_100_100/p/3/005/015/0b7/1b977cc.jpg",
-            role: "Sound Artist"
-        },
-        {
-            name: "Mike A Sorenti",
-            picture: "https://media.licdn.com/mpr/mpr/shrink_100_100/p/4/005/096/2f8/078fbed.jpg",
-            role: "Team Manager"
+            name: "Evan Dukes",
+            picture: "http://orig08.deviantart.net/a649/f/2009/277/9/1/mameshiba_sushi_cosplay_by_erikushin.jpg",
+            role: "Graphics Programmer"
         }
     ],
     CONTACT_MESSAGE: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ducimus fuga possimus, est iure accusamus sit. Sed libero illo nam accusantium. Enim molestiae cum ipsum perferendis, id, ipsam expedita totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ducimus fuga possimus, est iure accusamus sit. Sed libero illo nam accusantium. Enim molestiae cum ipsum perferendis, id, ipsam expedita totam."

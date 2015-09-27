@@ -18,6 +18,11 @@
         text-decoration: none;
         color: $white;
 
+        img {
+            float: left;
+            margin-right: 0.5em;
+            height: 100%;
+        }
         em {
             font-weight: bold;
             color: $blue;
@@ -398,9 +403,10 @@
     }
     .team-members {
         overflow: hidden;
+        text-align: center;
 
         .team-member {
-            float: left;
+            display: inline-block;
             width: calc(100%/6);
             padding: 1.0em;
             text-align: center;

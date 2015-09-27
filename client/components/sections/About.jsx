@@ -28,14 +28,14 @@ About = React.createClass({
 TeamMember = React.createClass({
     render() {
         return (
-            <div className="team-member">
-                <div className="wrapper">
+            <span className="team-member">
+                <dvi className="wrapper">
                     <img className="picture" src={this.props.data.picture} />
                     <div className="name">{this.props.data.name}</div>
                     <div className="role">{this.props.data.role}</div>
-                </div>
+                </dvi>
                 <div className="mask"></div>
-            </div>
+            </span>
         );
     }
 });

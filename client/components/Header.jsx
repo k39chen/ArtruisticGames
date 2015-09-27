@@ -2,7 +2,10 @@ Header = React.createClass({
     render() {
         return (
             <div id="header">
-                <a className="logo" href="#">Artruistic <em>Games</em></a>
+                <a className="logo" href="#">
+                    <img src="logo.png" />
+                    Artruistic <em>Games</em>
+                </a>
                 <ul className="nav-list">
                     <li className="nav-item"><a onClick={this.handleNavClick} href="#news">News</a></li>
                     <li className="nav-item"><a onClick={this.handleNavClick} href="#games">Games</a></li>
