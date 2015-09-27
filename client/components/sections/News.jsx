@@ -4,9 +4,13 @@ News = React.createClass({
             <div id="news" className="section">
                 <h1>News</h1>
                 <div className="content">
-                {AG_DATA.NEWS_ARTICLES.map((article, index) => {
-                    return <NewsArticle data={article} key={index} />
-                })}
+                    <div className="news-articles">
+                    {AG_DATA.NEWS_ARTICLES.map((article, index) => {
+                        return <NewsArticle data={article} key={index} />
+                    })}
+                    </div>
+                    <a className="article-paging article-prev fa fa-chevron-left"></a>
+                    <a className="article-paging article-next fa fa-chevron-right"></a>
                 </div>
             </div>
         )

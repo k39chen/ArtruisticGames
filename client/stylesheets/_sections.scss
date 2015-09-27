@@ -133,6 +133,9 @@
     background-color: $lightest-gray;
     overflow: hidden;
 
+    .news-articles {
+        overflow: hidden;
+    }
     .news-article {
         float: left;
         width: calc(100%/3);
@@ -247,6 +250,24 @@
             }
         }
     }
+    .article-paging {
+        position: absolute;
+        top: 45%;
+        @include transition(color 0.2s);
+        cursor: pointer;
+        color: #DDD;
+        font-size: 5.0em;
+
+        &.article-prev {
+            left: -0.75em;
+        }
+        &.article-next {
+            right: -0.75em;
+        }
+        &:hover {
+            color: $blue;
+        }
+    }
 }
 //============================================================
 // * SECTION: GAMES
@@ -256,6 +277,9 @@
     color: $white;
     overflow: hidden;
 
+    .games {
+        overflow: hidden;
+    }
     .game {
         float: left;
         width: calc(100%/3);
@@ -306,6 +330,25 @@
                 @include opacity(0.7);
                 bottom: 0;
             }
+        }
+    }
+    .game-paging {
+        position: absolute;
+        top: 45%;
+        @include transition(opacity 0.2s);
+        cursor: pointer;
+        color: #FFF;
+        font-size: 5.0em;
+        @include opacity(0.1);
+
+        &.game-prev {
+            left: -0.75em;
+        }
+        &.game-next {
+            right: -0.75em;
+        }
+        &:hover {
+            @include opacity(0.8);
         }
     }
 }

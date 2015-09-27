@@ -4,9 +4,13 @@ Games = React.createClass({
             <div id="games" className="section">
                 <h1>Games</h1>
                 <div className="content">
-                {AG_DATA.GAMES.map((game, index) => {
-                    return <Game data={game} key={index} />
-                })}
+                    <div className="games">
+                    {AG_DATA.GAMES.map((game, index) => {
+                        return <Game data={game} key={index} />
+                    })}
+                    </div>
+                    <a className="game-paging game-prev fa fa-chevron-left"></a>
+                    <a className="game-paging game-next fa fa-chevron-right"></a>
                 </div>
             </div>
         )
