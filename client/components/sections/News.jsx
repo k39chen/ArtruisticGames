@@ -18,14 +18,19 @@ NewsArticle = React.createClass({
             <div className="news-article" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut}>
                 <div className="wrapper">
                     <div className="blur-target">
-                        <div className="posted">
-                            <img className="author" src={this.props.data.authorPicture} />
-                            <div className="date">Posted on {this.props.data.date}</div>
-                        </div>
                         <img className="banner" src={this.props.data.banner} />
-                        <div className="title">{this.props.data.title}</div>
-                        <div className="text">{this.props.data.text}</div>
-                        <div className="shadow"></div>
+                        <div className="text-wrapper">
+                            <div className="title">{this.props.data.title}</div>
+                            <div className="text">{this.props.data.text}</div>
+                            <div className="shadow"></div>
+                        </div>
+                        <div className="posted">
+                            <div className="author">
+                                <img className="author-picture" src={this.props.data.authorPicture} />
+                                <div className="author-caption">Posted by <em>{this.props.data.authorName}</em></div>
+                            </div>
+                            <div className="date">{this.props.data.date}</div>
+                        </div>
                     </div>
                     <div className="read-more">
                         <span>Read <em>More</em></span>

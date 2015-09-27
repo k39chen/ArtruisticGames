@@ -150,46 +150,64 @@
             height: $news-article-height;
 
             .blur-target {
-                .title, .text {
-                    padding: 0 1.5em;
+                .banner {
+                    width: 100%;
+                }
+                .text-wrapper {
+                    position: relative;
+                    overflow: hidden;
+                    height: $news-article-text-height;
+
+                    .title, .text {
+                        padding: 0 1.5em;
+                    }
+                    .title {
+                        margin-bottom: 0.75em;
+                        padding-top: 0.75em;
+                        padding-bottom: 0.75em;
+                        font-weight: bold;
+                        border-bottom: solid 1px #EEE;
+                    }
+                    .text {
+                        line-height: 1.25em;
+                    }
+                    .shadow {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 50%;
+                        @include background-image(linear-gradient(transparent, $white));
+                    }
                 }
                 .posted {
                     overflow: hidden;
-                    padding: 1.0em 1.5em;
+                    padding: 0.75em 1.5em;
                     font-size: 0.8em;
+                    line-height: 1.5em;
+                    border-top: solid 1px #EEE;
 
                     .author {
                         float: left;
-                        height: 1.5em;
-                        margin-right: 0.5em;
-                        @include border-radius(50%);
+
+                        .author-picture {
+                            float: left;
+                            height: 1.5em;
+                            margin-right: 0.5em;
+                            @include border-radius(50%);
+                        }
+                        .author-caption {
+                            float: left;
+
+                            em {
+                                color: $blue;
+                            }
+                        }
                     }
                     .date {
-                        float: left;
-                        line-height: 1.5em;
+                        float: right;
+                        color: #DDD;
                     }
-                }
-                .banner {
-                    width: 100%;
-                    margin-bottom: 1.0em;
-                }
-                .title {
-                    margin-bottom: 0.75em;
-                    padding-bottom: 0.75em;
-                    font-weight: bold;
-                    border-bottom: solid 1px #EEE;
-                }
-                .text {
-                    height: 10.0em;
-                    line-height: 1.25em;
-                }
-                .shadow {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 25%;
-                    @include background-image(linear-gradient(transparent, $white));
                 }
             }
             .read-more {
